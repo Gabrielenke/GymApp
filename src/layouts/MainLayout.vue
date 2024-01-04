@@ -41,28 +41,22 @@ import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev",
+    title: "Home",
+    caption: "See your Routines and Workouts",
+    icon: "home",
+    link: "/",
   },
   {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
+    title: "Workouts",
+    caption: "See your workouts",
+    icon: "fitness_center",
+    link: "/workouts",
   },
   {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev",
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
+    title: "Exercises",
+    caption: "See all exercises",
+    icon: "fitness_center",
+    link: "/exercises",
   },
 ];
 
