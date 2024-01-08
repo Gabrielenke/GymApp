@@ -1,82 +1,73 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+  <q-layout class="" view="lhh lpR lFf">
+    <q-drawer
+      show-if-above
+      side="left"
+      behavior="desktop"
+      width="200"
+      class="bg-[#13161d] overflow-hidden"
+    >
+      <div class="flex flex-col p-4 items-center h-full justify-between">
+        <div class="flex w-full p-4 flex-col gap-5">
+          <svg
+            width="110px"
+            height="26px"
+            viewBox="0 0 110 26"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#fff"
+          >
+            <g fill="#fff" fill-rule="nonzero">
+              <path
+                d="M9.454.777c1.893 0 3.434 1.49 3.49 3.35l.002.106v4.063c0 .734-.534 1.54-1.343 1.8-.81.257-1.302-.556-1.341-1.255l-.002-.075V4.233a.802.802 0 00-.914-.79l-.467.064-.449.069c-.146.023-.29.047-.43.071l-.411.074c-1.139.216-2.05.468-2.727.751-.434.182-.75.368-.948.543-.123.11-.17.182-.18.228a2.687 2.687 0 00-.024.115l-.022.135-.022.154-.02.172-.02.19-.018.206-.025.34-.023.373-.02.403-.024.582-.02.626-.02.836-.015 1.065-.008 1.114v1.048l.008 1.202.012.993.018.971.022.936.022.713.031.838.043.907.033.535.026.36.027.32.029.279.019.156.039.039.028.025c.177.15.486.324.92.502.425.173.944.341 1.559.502l.344.088.363.085c.186.043.38.085.58.127l.409.082.428.08c.145.027.294.054.446.08l.464.077a.805.805 0 00.926-.658l.008-.064.003-.065v-2.688a7.163 7.163 0 013.455-6.116l.138-.081 3.323-1.923a4.513 4.513 0 002.26-3.76l.002-.142V4.314c0-1.909 1.564-3.456 3.492-3.456.189 0 .377.015.564.045l.445.074.431.075.419.076.405.079.392.08.19.041.373.083.181.043.353.086.34.09c2.663.72 4.07 1.673 4.268 3.141l.025.205.025.232.012.125.023.27.032.449.021.326.039.713.034.783.023.627.02.656.018.68.024 1.175.01.723.01.975.003.978-.003 1.21-.006.71-.014.92-.015.665-.018.637-.022.605-.017.383-.018.366-.02.346-.023.326-.023.305-.026.282-.028.257-.014.119-.03.218c-.021.136-.043.254-.067.351-.382 1.585-2.045 2.593-4.994 3.281l-.367.083c-.187.04-.38.08-.576.118l-.4.076-.412.072-.21.035-.432.069-.445.065c-1.909.273-3.68-1.037-3.956-2.926a3.422 3.422 0 01-.032-.33l-.004-.165v-4.035c0-.734.651-1.636 1.343-1.8.692-.163 1.302.555 1.341 1.254l.002.076v4.505a.805.805 0 00.921.79l.196-.029.38-.058.368-.06.178-.031.346-.063.332-.064.319-.065.304-.067.291-.067.277-.069.263-.069.249-.069.12-.035.228-.07.214-.07.2-.07.187-.069.173-.07c.055-.022.108-.045.159-.068l.145-.068c.046-.022.09-.045.13-.067l.118-.066.053-.033.097-.064c.164-.117.257-.226.281-.324.008-.032.015-.067.023-.106l.021-.125.02-.143.03-.248.026-.285.024-.32.029-.478.025-.53.026-.729.012-.467.017-.822.013-1.045.005-1.276v-.745l-.005-.693-.011-1.075-.016-1.008-.031-1.357-.028-.91-.04-1.006-.03-.605-.033-.546-.017-.248-.027-.338-.028-.295-.02-.166-.032-.032-.028-.024c-.174-.15-.481-.323-.915-.5-.655-.268-1.541-.523-2.651-.76l-.402-.083-.42-.082-.438-.08-.456-.079a49.572 49.572 0 00-.236-.038.803.803 0 00-.934.725l-.002.062v2.688a7.163 7.163 0 01-3.455 6.116l-.138.082-3.323 1.922a4.513 4.513 0 00-2.26 3.76l-.002.142v2.688c0 .187-.015.374-.046.559-.312 1.883-2.107 3.16-4.01 2.852l-.444-.073-.43-.075-.416-.077-.404-.078-.39-.08a32.514 32.514 0 01-.19-.041l-.372-.083a27.16 27.16 0 01-.18-.043l-.352-.086-.338-.088c-2.656-.719-4.066-1.67-4.28-3.13l-.022-.17-.022-.19-.022-.211-.03-.352-.04-.529-.026-.44-.025-.471-.03-.675-.021-.536-.03-.944-.028-1.196L.78 14.52l-.01-.842-.003-.635-.002-.494.002-1.093.009-.983.015-.952.022-.91.022-.688.02-.49.031-.613.036-.562.03-.383.02-.237.024-.22.011-.103.025-.194.026-.176.027-.157.029-.137c.349-1.515 1.811-2.512 4.37-3.187l.339-.087.352-.082.181-.04.371-.078.383-.074.197-.036.401-.07.206-.033.42-.065.215-.031.44-.06c.153-.021.308-.031.464-.031zM47.387 6v5.275h4.845V6h3.387v13.703h-3.387v-5.624h-4.845v5.624H44V6zM72.863 6v2.672h-5.577v2.69h4.768v2.673h-4.768v2.995h5.802v2.673h-9.19V6zM82.782 6c1.792 7.3 2.71 11.023 2.752 11.168.064-.138 1.028-3.86 2.892-11.168h3.445l-4.176 13.703h-4.318L79.2 6h3.581zM100.271 6l2.303 6.473c.06-.102.906-2.26 2.536-6.473h3.502l-4.273 9.002v4.7h-3.387v-4.7L96.68 6h3.592z"
+              ></path>
+            </g>
+          </svg>
 
-        <q-toolbar-title> Gym App </q-toolbar-title>
+          <a
+            href="/"
+            class="flex text-white self-center w-full items-center gap-2"
+          >
+            <q-icon name="home" />
+            <p class="text-md">Home</p>
+          </a>
 
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+          <a
+            href="/routines"
+            class="flex text-white self-center w-full items-center gap-2"
+          >
+            <q-icon name="assignment" />
+            <p class="text-md">Routines</p>
+          </a>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+          <a
+            href="/exercises"
+            class="flex text-white self-center w-full items-center gap-2"
+          >
+            <q-icon name="fitness_center" />
+            <p class="text-md">Exercises</p>
+          </a>
+        </div>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+        <q-separator color="white" inset />
+        <div class="flex">
+          <div class="flex items-center gap-2">
+            <img
+              class="rounded-full w-8 h-8"
+              src="https://cdn.quasar.dev/img/avatar2.jpg"
+            />
+            <p class="text-white text-sm">Username</p>
+          </div>
+          <q-btn icon="logout" flat color="white" />
+        </div>
+      </div>
     </q-drawer>
 
     <q-page-container>
+      <q-separator inset />
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
-
-<script>
-import { defineComponent, ref } from "vue";
-import EssentialLink from "components/EssentialLink.vue";
-
-const linksList = [
-  {
-    title: "Home",
-    caption: "See your Routines and Workouts",
-    icon: "home",
-    link: "/",
-  },
-  {
-    title: "Workouts",
-    caption: "See your workouts",
-    icon: "fitness_center",
-    link: "/workouts",
-  },
-  {
-    title: "Exercises",
-    caption: "See all exercises",
-    icon: "fitness_center",
-    link: "/exercises",
-  },
-];
-
-export default defineComponent({
-  name: "MainLayout",
-
-  components: {
-    EssentialLink,
-  },
-
-  setup() {
-    const leftDrawerOpen = ref(false);
-
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
-    };
-  },
-});
+<script setup>
+import { useLink } from "vue-router";
 </script>
