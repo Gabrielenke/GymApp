@@ -1,4 +1,4 @@
-# Quasar App (camargo-form)
+# Quasar App 
 
 A Quasar Project
 
